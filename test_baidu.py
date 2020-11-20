@@ -3,12 +3,12 @@ import time
 from selenium import webdriver
 import unittest
 from auto_test.common.config import Config,DRIVER_PATH
-from contextlib import suppress
+
 
 
 class TestBaiDu(unittest.TestCase):
     config = Config()
-    url = Config.get('URL')
+    url = config.get('URL')
 
 
     def setUp(self):
