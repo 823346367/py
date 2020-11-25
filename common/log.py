@@ -35,4 +35,5 @@ class Logger(object):
             self.logger.addHandler(file_handler)
         return self.logger
 
+
 logger = Logger().get_logger()
