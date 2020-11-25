@@ -1,9 +1,8 @@
-import os
 import time
 from selenium import webdriver
 import unittest
 from auto_test.common.config import Config,DRIVER_PATH
-
+from auto_test.common.log import logger
 
 
 class TestBaiDu(unittest.TestCase):
@@ -25,10 +24,12 @@ class TestBaiDu(unittest.TestCase):
         self.driver.find_element_by_id('su').click()
         time.sleep(2)
         links = self.driver.find_elements_by_xpath('//*[@id="content_left"]/div/h3/a')
-        i = 1
         for link in links:
-            print(str(i) + '.' + link.text)
-            i += 1
+            logger.info(link.text)
+        # i = 1
+        # for link in links:
+        #     print(str(i) + '.' + link.text)
+        #     i += 1
 
 
     def test_search_2(self):
@@ -36,10 +37,12 @@ class TestBaiDu(unittest.TestCase):
         self.driver.find_element_by_id('su').click()
         time.sleep(2)
         links = self.driver.find_elements_by_xpath('//*[@id="content_left"]/div/h3/a')
-        i = 1
         for link in links:
-            print(str(i) + '.' + link.text)
-            i += 1
+            logger.info(link.text)
+        # i = 1
+        # for link in links:
+        #     print(str(i) + '.' + link.text)
+        #     i += 1
 
 
 if __name__ == '__main__':

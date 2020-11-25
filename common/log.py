@@ -35,5 +35,5 @@ class Logger(object):
             self.logger.addHandler(file_handler)
         return self.logger
 
-
+# 外部调用此实例化对象
 logger = Logger().get_logger()
