@@ -1,6 +1,7 @@
 # -- coding: utf-8 --
 import logging
 import os
+import time
 from logging.handlers import TimedRotatingFileHandler
 from auto_test.common.config import LOG_PATH
 
@@ -10,7 +11,8 @@ class Logger(object):
 
         logging.root.setLevel(logging.NOTSET)
         # 日志名称
-        self.log_file_name = 'test.log'
+        log_time=time.strftime('%Y-%m-%d', time.localtime())
+        self.log_file_name = f'{log_time}test.log'
         self.backup_count = 5
         # 日志输出等级
         self.console_output_level = 'WARNING'
