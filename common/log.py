@@ -12,7 +12,7 @@ class Logger(object):
         logging.root.setLevel(logging.NOTSET)
         # 日志名称
         log_time=time.strftime('%Y-%m-%d', time.localtime())
-        self.log_file_name = f'{log_time}test.log'
+        self.log_file_name = f'{log_time} test.log'
         self.backup_count = 5
         # 日志输出等级
         self.console_output_level = 'WARNING'
