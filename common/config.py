@@ -16,10 +16,7 @@ class Config:
         self.config = YamlReader(config).data
 
     def get(self,element,index=0):
-        """
 
-        :rtype: object
-        """
         return self.config[index].get(element)
 
 
